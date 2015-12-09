@@ -1,0 +1,150 @@
+body {
+    width: 945px;
+    font-size: 14px !important;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0 20px;
+}
+
+#docs {
+    float: left;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+#report_selector_menu {
+    float: right;
+    margin-bottom: 10px;
+}
+
+#reports_dropdown {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+#editor {
+    min-height: 100px;
+    width: 100%;
+}
+
+#params_table {
+    float: left;
+    margin: 10px 0;
+}
+
+#params_table th, #params_table td {
+    text-align: left;
+    padding: 0 3px;
+}
+
+#params_table th {
+    height: 38px;
+    line-height: 38px;
+    font-weight: normal;
+}
+
+#script_params {
+    font-family: monospace;
+}
+
+#run_button {
+    float: right;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#output_container {
+    visibility: hidden;
+    position: relative;
+}
+
+#output_container #csv_export {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    z-index: 3;
+}
+
+#output_container #tabs .tab {
+    float: left;
+    padding: 4px 10px;
+    cursor: pointer;
+    line-height: 24px;
+
+    background-color: #f5f5f5;
+    border: 1px solid #333;
+    border-left: none;
+}
+
+#output_container #tabs .tab:nth-child(1) {
+    border-left: 1px solid #333;
+}
+#output_container #tabs .tab.active {
+    font-weight: bold;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+#tabs {
+    z-index: 2;
+    position: relative;
+    top: 1px;
+}
+
+.output_pane {
+    font-family: monospace;
+    white-space: pre;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #333;
+    display: none;
+    z-index: 1;
+}
+
+.output_pane.active {
+    display: block;
+}
+
+#output_table {
+    font-family: monospace;
+    white-space: pre;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+#output_table td, #output_table th {
+    text-align: left;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+#output_container .spinner_wrapper {
+    text-align: center;
+    padding: 20px 0
+}
+
+.tooltip_questionmark {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+}
+
+#script_params {
+    display: block;
+    box-sizing: border-box;
+    min-width: 440px;
+    min-height: 70px;
+    font-size: 13px;
+    color: #000;
+    border: 1px solid #bdc7d2;
+    border-radius: 3px;
+    padding: 8px 10px 7px;
+    color: #5c617b;
+    background-color: #f6f7f8;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
