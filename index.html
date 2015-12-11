@@ -375,7 +375,7 @@ function main() {
         city: events[0]['$city'],
       };
       for (var i = 0; i < events.length; ++i) {
-        var event_time = new Date(events[i]['time'] * 1000);
+        var event_time = new Date(events[i]['time']);
         var event_day = new Date(event_time.getFullYear(),
                                  event_time.getMonth(),
                                  event_time.getDate());
@@ -483,7 +483,7 @@ function get_date_key(unit) {
     switch (unit) {
         case "hour":
             return function(e) { 
-                var d = new Date(e.time * 1000);
+                var d = new Date(e.time);
                 d.setMinutes(0);
                 d.setSeconds(0);
                 d.setMilliseconds(0);
@@ -491,7 +491,7 @@ function get_date_key(unit) {
             };
         case "day":
             return function(e) { 
-                var d = new Date(e.time * 1000);
+                var d = new Date(e.time);
                 d.setHours(0);
                 d.setMinutes(0);
                 d.setSeconds(0);
@@ -500,7 +500,7 @@ function get_date_key(unit) {
             };
         case "week":
             return function(e) {
-                var d = new Date(e.time * 1000);
+                var d = new Date(e.time);
                 var day = d.getDate(),
                     month = d.getMonth(),
                     year = d.getFullYear(),
@@ -510,7 +510,7 @@ function get_date_key(unit) {
             };
         case "month":
             return function(e) {
-                var d = new Date(e.time * 1000);
+                var d = new Date(e.time);
                 d.setDate(1);
                 d.setHours(0);
                 d.setMinutes(0);
@@ -520,7 +520,7 @@ function get_date_key(unit) {
             };
         case "quarter":
             return function(e) {
-                var d = new Date(e.time * 1000);
+                var d = new Date(e.time);
                 d.setMonth(d.getMonth() - d.getMonth() % 3);
                 d.setDate(1);
                 d.setHours(0);
